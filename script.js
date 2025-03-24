@@ -28,7 +28,7 @@ class Entidade {
        this.altura = altura
    }
    desenhar (){
-       ctx.fillStyle = 'black'
+       ctx.fillStyle = 'yellow'
        ctx.fillRect(this.x, this.y, this.largura, this.altura)
    }
 }
@@ -38,8 +38,11 @@ class Cobra extends Entidade {
    constructor(x, y, largura, altura) {
        super(x, y, largura, altura);
        this.pontuacao = 0
+       this.gameOver = false;
    }
    atualizar() {
+    if (this.gameOver) return;
+
     if (teclasPressionadas.KeyW) {
         this.y -= 7;
     } else if (teclasPressionadas.KeyS) {
@@ -52,6 +55,8 @@ class Cobra extends Entidade {
  
     if (this.x < 0 || this.x + this.largura > canvas.width || 
         this.y < 0 || this.y + this.altura > canvas.height) {
+
+        this.gameOver = true;
         this.#fimDeJogo();
     }
  }
