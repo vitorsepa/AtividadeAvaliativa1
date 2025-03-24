@@ -1,4 +1,4 @@
-#Jogo do Cobra
+# Jogo do Cobra
 ## Desenvolvimento do jogo da cobra, para a avaliação do dia 24/03.
 
 Para movimentar-se no jogo, é necessário usar as teclas W, A, S, e D do teclado. Respectivamente, são as teclas para se virar para Cima, Esquerda, Baixo e Direita.
